@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+body > button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 5px #979797;
+}
+
+
+.active {
+    display: block !important;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 2s;
+    z-index: 9;
+}
+
+.modal-overlay .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 50%;
+    z-index: 10;
+}
+
+.modal-overlay .modal .modal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 40px;
+    border-bottom: 1px solid #333333;
+}
+
+.modal-overlay .modal .modal-header .title {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modal-overlay .modal .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: #333333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.modal-overlay .modal .modal-body {
+    line-height: 1.6;
+    padding: 30px;
+    text-align: justify;
+    color: black;
+    overflow-y: auto;
+    max-height: calc(100vh - 210px);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
